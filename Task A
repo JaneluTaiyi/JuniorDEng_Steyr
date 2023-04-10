@@ -1,1 +1,53 @@
+""" Solution file to Task A """
+# date:   09-April-2023
+# ver:    1.0
+# author: Jane Jingyi Lu
 
+# Import mainly used packages
+import numpy as np
+import pandas as pd
+import openpyxl
+
+
+# Import possibly needed packages
+import scipy
+import os
+
+
+def get_data(raw_data):
+    """ a function to get the data concerned """
+    
+    df = raw_data
+    
+    # get the total consumption, group by year and meat type
+    
+    # sum the consumptions happened in the same year
+    dataframe.sum()
+    # sum the consumptions on the same meat type
+    
+    
+    print("input is:", df)
+    #print("Total consumption group of Year ... ", x)
+    #print("Total consumption group of Year ... ", x)
+    #print("Total consumption group of Year ... ", x)
+    
+    
+    
+if __name__ == '__main__':
+    
+    # Import csv file
+    # Read in the data
+    # Note: please download this csv file from the provided link and save it at the same path of this Python code
+    IN_FILE = 'meat_consumption.csv'
+    raw_data = pd.read_csv(IN_FILE, skiprows=0, skipfooter=0, header='infer', sep=',', engine='python')
+    print("type of raw_data:",type(raw_data))
+    print("size:",np.size(raw_data))
+    
+    # Get the concerned data
+    get_data (raw_data)
+    
+    
+    
+    # Export raw data to excel format
+    out_file = raw_data.to_excel('meat_consumption.xlsx', sheet_name = 'raw data from csv file', index = False)
+    print('Raw data export to an excel format. (meat_consumption.xlsx)')
